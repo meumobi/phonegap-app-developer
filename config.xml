@@ -110,7 +110,6 @@
     <engine name="wp8" spec="~3.8.1" />
     <engine name="android" spec="~5.0.0" />
     <engine name="ios" spec="~4.0.1" />
-
 		<!-- 
 			Navigation Whitelist
 			Controls which URLs the WebView itself can be navigated to -->
