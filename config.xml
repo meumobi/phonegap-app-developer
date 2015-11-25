@@ -45,6 +45,32 @@
     <plugin name="adobe-mobile-services" spec="^4.7.0" />
     <plugin name="nl.x-services.plugins.insomnia" spec="https://github.com/EddyVerbruggen/Insomnia-PhoneGap-Plugin.git#:." />
     <plugin name="cordova-plugin-ble-central" spec="~1.0.1" />
+    <plugin name="com.telerik.plugins.nativepagetransitions" spec="~0.5.4" />
+    <!-- plugin name="com.pushwoosh.plugins.pushwoosh" source="pgb" version="~3.4.1" / -->
+	<plugin name="cordova-open" spec="~1.0.9" />
+	<plugin name="cordova-plugin-apprate" spec="~1.1.11"/>
+	<plugin name="cordova-plugin-calendar" spec="~4.4.4" />
+	<plugin name="cordova-plugin-console" spec="~1.0.1" />
+	<plugin name="cordova-plugin-device" spec="~1.0.1" />
+	<plugin name="cordova-plugin-device-orientation" spec="~1.0.1" />
+	<plugin name="cordova-plugin-dialogs" spec="~1.1.1" />
+	<plugin name="cordova-plugin-file" spec="~3.0.0" />	
+	<plugin name="cordova-plugin-file-transfer" spec="~1.3.0" />
+	<plugin name="cordova-plugin-globalization" spec="~1.0.1" />
+	<plugin name="cordova-plugin-google-analytics" spec="~0.8.1" />
+	<plugin name="cordova-plugin-inappbrowser" spec="~1.0.1" />
+	<plugin name="cordova-plugin-network-information" spec="~1.0.1" />
+	<plugin name="cordova-plugin-spinnerdialog" spec="~1.3.2" />
+	<plugin name="cordova-plugin-splashscreen" spec="~2.1.0" />
+	<plugin name="cordova-plugin-statusbar" spec="~1.0.0" />
+	<plugin name="cordova-plugin-whitelist" spec="~1.0.0" />
+	<plugin name="cordova-plugin-x-socialsharing" spec="~5.0.2" />	
+	<plugin name="cordova-plugin-x-toast" spec="~2.2.0" />
+	<plugin name="cordova-plugin-appversion" spec="~1.0.0" />
+
+	<plugin name="hu.dpal.phonegap.plugins.uniquedeviceid" spec="https://github.com/Paldom/UniqueDeviceID.git#1.2.0" />
+	<plugin name="net.tunts.webintent" spec="https://github.com/Tunts/WebIntent.git#0.2.1" />
+
     <platform name="ios">
         <icon height="76" src="resources/icon/ios/icon-76.png" width="76" />
         <icon height="152" src="resources/icon/ios/icon-76@2x.png" width="152" />
