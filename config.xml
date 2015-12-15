@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.adobe.phonegap.app" version="1.7.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.meumobi.phonegap.app" version="1.7.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>PhoneGap</name>
     <description>
         The PhoneGap Developer app is a testing utility for web developers and designers using the PhoneGap framework. After installing this app on your device you will be able to connect it to the PhoneGap desktop app to instantly view and test your work
@@ -16,13 +16,16 @@
     <platform name="ios">
         <preference name="Orientation" value="all" />
     </platform>
-    <preference name="StatusBarStyle" value="default" />
-    <preference name="ShowSplashScreenSpinner" value="false" />
-    <preference name="AutoHideSplashScreen" value="false" />
-    <preference name="DisallowOverscroll" value="true" />
+		<preference name="android-build-tool" value="gradle" />
+		<preference name="AutoHideSplashScreen" value="false" />
+		<preference name="DisallowOverscroll" value="true" />
+		<preference name="ShowSplashScreenSpinner" value="false" />
+		<preference name="StatusBarStyle" value="default" />
+
     <access origin="*" />
     <content src="index.html" />
 
+    <plugin name="adobe-mobile-services" spec="^4.7.0" />
     <plugin name="cordova-plugin-battery-status" spec="~1.1.2" />
     <plugin name="cordova-plugin-camera" spec="~2.2.0" />
     <plugin name="cordova-plugin-console" spec="~1.0.3" />
@@ -60,7 +63,7 @@
 		<plugin name="cordova-plugin-appversion" spec="~1.0.0" />
 		
 		<plugin name="hu.dpal.phonegap.plugins.uniquedeviceid" spec="https://github.com/Paldom/UniqueDeviceID.git#1.2.0" />
-		<plugin name="net.tunts.webintent" spec="https://github.com/Tunts/WebIntent.git#0.2.1" />
+		<plugin name="net.tunts.webintent" source="pgb" spec="~0.2.1" />
 
     <platform name="ios">
         <icon height="76" src="resources/icon/ios/icon-76.png" width="76" />
