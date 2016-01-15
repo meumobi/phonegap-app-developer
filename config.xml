@@ -67,7 +67,6 @@
 		<plugin name="hu.dpal.phonegap.plugins.uniquedeviceid" spec="https://github.com/Paldom/UniqueDeviceID.git#1.2.0" />
 		<plugin name="net.tunts.webintent" spec="https://github.com/Tunts/WebIntent.git#0.2.1" />
 
-
         <icon height="76" src="resources/icon/ios/icon-76.png" width="76" />
         <icon height="152" src="resources/icon/ios/icon-76@2x.png" width="152" />
         <icon height="72" src="resources/icon/ios/icon-72.png" width="72" />
@@ -111,4 +110,33 @@
     <engine name="wp8" spec="~3.8.1" />
     <engine name="android" spec="~5.0.0" />
     <engine name="ios" spec="~4.0.1" />
+
+		<!-- 
+			Navigation Whitelist
+			Controls which URLs the WebView itself can be navigated to -->
+		<allow-navigation href="*" />
+
+		<!--
+			Network Request Whitelist
+			Controls which network requests (images, XHRs, etc) are allowed to be made -->
+		<access origin="*" />
+		<!--
+			Intent Whitelist
+			Controls which URLs the app is allowed to ask the system to open -->
+		<allow-intent href="file://*" />
+		<allow-intent href="sms:*" />
+		<allow-intent href="tel:*" />
+		<allow-intent href="geo:*" />
+		<allow-intent href="ibooks:*" />
+		<allow-intent href="http://*/*" />
+		<allow-intent href="https://*/*" />
+		<allow-intent href="mailto:*" />
+		<allow-intent href="geo:*" />
+		<platform name="android">
+			<allow-intent href="market:*" />
+		</platform>
+		<platform name="ios">
+			<allow-intent href="itms:*" />
+			<allow-intent href="itms-apps:*" />
+		</platform>
 </widget>
