@@ -98,6 +98,9 @@
         <splash height="1334" src="resources/splash/ios/Default-667h.png" width="750" />
         <splash height="2208" src="resources/splash/ios/Default-736h.png" width="1242" />
         <splash height="1242" src="resources/splash/ios/Default-Landscape-736h.png" width="2208" />
+				
+				<allow-intent href="itms:*" />
+				<allow-intent href="itms-apps:*" />
     </platform>
     <platform name="android">
         <preference name="SplashScreenDelay" value="0" />
@@ -105,6 +108,8 @@
         <icon density="mdpi" src="resources/icon/android/icon-48.png" />
         <icon density="hdpi" src="resources/icon/android/icon-72.png" />
         <icon density="xhdpi" src="resources/icon/android/icon-96.png" />
+				
+				<allow-intent href="market:*" />
     </platform>
     <platform name="wp8">
         <icon height="99" src="resources/icon/wp8/ApplicationIcon.png" width="99" />
@@ -114,4 +119,25 @@
     <engine name="wp8" spec="~3.8.1" />
     <engine name="ios" spec="~3.9.2" />
     <engine name="android" spec="~4.1.1" />
+		<!-- 
+			Navigation Whitelist
+			Controls which URLs the WebView itself can be navigated to -->
+		<allow-navigation href="*" />
+
+		<!--
+			Network Request Whitelist
+			Controls which network requests (images, XHRs, etc) are allowed to be made -->
+		<access origin="*" />
+		<!--
+			Intent Whitelist
+			Controls which URLs the app is allowed to ask the system to open -->
+		<allow-intent href="file://*" />
+		<allow-intent href="sms:*" />
+		<allow-intent href="tel:*" />
+		<allow-intent href="geo:*" />
+		<allow-intent href="ibooks:*" />
+		<allow-intent href="http://*/*" />
+		<allow-intent href="https://*/*" />
+		<allow-intent href="mailto:*" />
+		<allow-intent href="geo:*" />
 </widget>
