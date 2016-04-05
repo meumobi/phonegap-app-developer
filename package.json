@@ -28,6 +28,8 @@
         "test-wp8": "npm run build:setup && phonegap --verbose build wp8 --test"
     },
     "dependencies": {
+      "gulp-load-plugins": "^1.2.0",
+      "gulp-task-listing": "^1.0.1",
     },
     "devDependencies": {
         "app-root-path": "1.0.0",
