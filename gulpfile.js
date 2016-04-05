@@ -1,13 +1,15 @@
-var gulp = require('gulp'),
-streamqueue = require('streamqueue'),
-zip = require('gulp-zip');
+var gulp        = require('gulp'),
+    $           = require('gulp-load-plugins')(),
+    streamqueue = require('streamqueue');
 
+// Add a task to render the output 
+gulp.task('help', $.taskListing);
 
 /*====================================================================
 =               Build Zip to submit to PhoneGap Build                =
 ====================================================================*/
 
-gulp.task('build-zip', function () {
+gulp.task('zip', function () {
 	var filename =  "PhoneGapAppDeveloper.zip";
 	return gulp.src([
 		'www/**/*',
@@ -16,6 +18,6 @@ gulp.task('build-zip', function () {
 		'resources/splash/ios/**/*',
 		'config.xml'
 	], {base: "."})
-		.pipe(zip(filename))
+		.pipe($.zip(filename))
 		.pipe(gulp.dest('.'));
 });
