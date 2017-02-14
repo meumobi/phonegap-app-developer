@@ -2,11 +2,11 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.meumobi.phonegap.app" version="1.7.1">
   <name>PhoneGap</name>
   <description>
-        The PhoneGap Developer app is a testing utility for web developers and designers using the PhoneGap framework. After installing this app on your device you will be able to connect it to the PhoneGap desktop app to instantly view and test your work
-    </description>
+    The PhoneGap Developer app is a testing utility for web developers and designers using the PhoneGap framework. After installing this app on your device you will be able to connect it to the PhoneGap desktop app to instantly view and test your work
+  </description>
   <author email="support@phonegap.com" href="http://phonegap.com">
-        Adobe PhoneGap Team
-    </author>
+    Adobe PhoneGap Team
+  </author>
   <hook src="resources/script/add-hockeyapp.js" type="before_build"/>
   <hook src="resources/script/production-analytics.js" type="before_build"/>
   <hook src="resources/script/add-version.js" type="before_build"/>
@@ -16,62 +16,82 @@
   <platform name="ios">
     <preference name="Orientation" value="all"/>
   </platform>
-  <preference name="android-build-tool" value="gradle"/>
+  <!--preference name="android-build-tool" value="gradle"/>
   <preference name="AutoHideSplashScreen" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="ShowSplashScreenSpinner" value="false"/>
   <preference name="StatusBarStyle" value="default"/>
-  <preference name="phonegap-version" value="cli-6.0.0"/>
+  <preference name="phonegap-version" value="cli-6.3.0"/-->
+  <!-- 
+    https://cordova.apache.org/docs/en/latest/config_ref/#preference
+  -->
+	<preference name="android-build-tool" value="gradle" />
+	<preference name="android-installLocation" value="auto"/>	
+	<preference name="android-minSdkVersion" value="16"/>
+	<preference name="BackupWebStorage" value="none" />
+	<preference name="detect-data-types" value="true"/>
+	<preference name="disable-cursor" value="false"/>
+	<preference name="DisallowOverscroll" value="true" />
+	<preference name="exit-on-suspend" value="false"/>
+	<!-- preference name="fullscreen" value="true"/-->
+	<preference name="orientation" value="default"/>
+	<preference name="permissions" value="none"/>
+	<preference name="prerendered-icon" value="true"/>
+	<preference name="stay-in-webview" value="false"/>
+	<preference name="target-device" value="universal"/>
+	<preference name='phonegap-version' value='cli-6.5.0' />
+  
   <access origin="*"/>
   <content src="index.html"/>
   <plugin name="adobe-mobile-services" spec="^4.7.0"/>
-  <plugin name="cordova-open" spec="~1.0.9"/>
-  <plugin name="cordova-plugin-apprate" spec="~1.1.11"/>
+  <plugin name="cordova-plugin-apprate" spec="~1.2.0"/>
   <plugin name="cordova-plugin-appversion" spec="~1.0.0"/>
   <plugin name="cordova-plugin-battery-status" spec="~1.1.2"/>
   <plugin name="cordova-plugin-ble-central" spec="~1.0.6"/>
-  <plugin name="cordova-plugin-calendar" spec="~4.4.4"/>
-  <plugin name="cordova-plugin-google-analytics" spec="~0.8.1"/>
-  <plugin name="cordova-plugin-spinnerdialog" spec="~1.3.2"/>
-  <plugin name="cordova-plugin-wkwebview" spec="~0.6.7"/>
-  <plugin name="cordova-plugin-x-socialsharing" spec="~5.0.2"/>
-  <plugin name="cordova-plugin-x-toast" spec="~2.4.0"/>
-  <plugin name="phonegap-plugin-contentsync" spec="~1.2.4"/>
-  <plugin name="cordova-plugin-uniquedeviceid" spec="~1.3.2"/>
-  <!-- plugin name="com.telerik.plugins.nativepagetransitions" spec="~0.6.0" / -->
+  <plugin name="cordova-plugin-calendar" spec="4.5.0"/>
+  <plugin name="cordova-plugin-file-opener2" spec="https://github.com/meumobi/cordova-plugin-file-opener2.git#feature-display-preview-ios"/>
+  <plugin name="cordova-plugin-google-analytics" spec="~0.9.0"/>
   <plugin name="cordova-plugin-insomnia"/>
-  <plugin name="pushwoosh-pgb-plugin"/>
-  <!--
-				Pushwoosh N/A, requires Push Certificate to work on iOS. 
-				But without it could retrieve a token
+  <plugin name="cordova-plugin-spinnerdialog" spec="~1.3.2"/>
+  <plugin name="cordova-plugin-uniquedeviceid" spec="~1.3.2"/>
+  <plugin name="cordova-plugin-x-socialsharing" spec="~5.1.6"/>
+  <plugin name="cordova-plugin-x-toast" spec="~2.5.2"/>
+  <plugin name="onesignal-cordova-plugin" spec="~1.13.2"/>
+  <plugin name="phonegap-plugin-contentsync" spec="~1.2.4"/>
 
-  		<plugin name="net.tunts.webintent" source="pgb" spec="~0.2.1" />
-  		OR
-  		<plugin name="net.tunts.webintent" spec="https://github.com/Tunts/WebIntent.git#0.2.1" />
-  	-->
+  <!--plugin name="pushwoosh-pgb-plugin"/-->
   <!--
-  			Cordova Core plugins
-  		-->
+    Pushwoosh N/A, requires Push Certificate to work on iOS. 
+    But without it could retrieve a token
+
+    <plugin name="net.tunts.webintent" source="pgb" spec="~0.2.1" />
+    OR
+    <plugin name="net.tunts.webintent" spec="https://github.com/Tunts/WebIntent.git#0.2.1" />
+    -->
+  <!--
+      Cordova Core plugins
+      -->
   <plugin name="cordova-plugin-camera"/>
-  <plugin name="cordova-plugin-console"/>
+  <plugin name="cordova-plugin-console" spec="~1.0.5"/>
   <plugin name="cordova-plugin-contacts"/>
-  <plugin name="cordova-plugin-device"/>
-  <plugin name="cordova-plugin-device-motion"/>
+  <plugin name="cordova-plugin-device" spec="~1.1.4"/>
+  <plugin name="cordova-plugin-device-motion" spec="~1.2.3"/>
   <plugin name="cordova-plugin-device-orientation"/>
-  <plugin name="cordova-plugin-dialogs"/>
-  <plugin name="cordova-plugin-file"/>
-  <plugin name="cordova-plugin-file-transfer"/>
+  <plugin name="cordova-plugin-dialogs" spec="~1.3.1"/>
+  <plugin name="cordova-plugin-file" spec="~4.3.1"/>
+  <plugin name="cordova-plugin-file-transfer" spec="~1.6.1"/>
   <plugin name="cordova-plugin-geolocation"/>
-  <plugin name="cordova-plugin-globalization"/>
-  <plugin name="cordova-plugin-inappbrowser"/>
+  <plugin name="cordova-plugin-globalization" spec="~1.0.5"/>
+  <plugin name="cordova-plugin-inappbrowser" spec="~1.5.0"/>
   <plugin name="cordova-plugin-insomnia"/>
   <plugin name="cordova-plugin-media"/>
   <plugin name="cordova-plugin-media-capture"/>
-  <plugin name="cordova-plugin-network-information"/>
-  <plugin name="cordova-plugin-splashscreen"/>
-  <plugin name="cordova-plugin-statusbar"/>
+  <plugin name="cordova-plugin-network-information" spec="~1.3.1"/>
+  <plugin name="cordova-plugin-splashscreen" spec="~4.0.1"/>
+  <plugin name="cordova-plugin-statusbar" spec="~2.2.1"/>
   <plugin name="cordova-plugin-vibration"/>
-  <plugin name="cordova-plugin-whitelist"/>
+  <plugin name="cordova-plugin-whitelist" spec="~1.3.1"/>
+
   <platform name="ios">
     <icon height="76" src="resources/icon/ios/icon-76.png" width="76"/>
     <icon height="152" src="resources/icon/ios/icon-76@2x.png" width="152"/>
@@ -118,35 +138,34 @@
     <icon height="159" src="resources/icon/wp8/TileMedium.png" width="159"/>
     <icon height="110" src="resources/icon/wp8/TileSmall.png" width="110"/>
   </platform>
-	<engine name="wp8" spec="~3.8.1"/>
-	<engine name="android" spec="~5.1.1"/>
-  <engine name="ios" spec="~4.1.1"/>
-	<!-- 
-		Navigation Whitelist
-		Controls which URLs the WebView itself can be navigated to
-		-->
-	<allow-navigation href="*"/>
-	<allow-navigation href="cdvfile://*"/>
-	<!--
-		Network Request Whitelist
-		Controls which network requests (images, XHRs, etc) are allowed to be made
-		-->
-	<access origin="*"/>
-	<!-- For chrisben/imgcache.js
-		https://github.com/chrisben/imgcache.js/blob/master/CORDOVA.md 
-		-->
-	<access origin="cdvfile://*"/>
-	<!--
-		Intent Whitelist
-		Controls which URLs the app is allowed to ask the system to open
-		-->
-	<allow-intent href="file://*"/>
-	<allow-intent href="sms:*"/>
-	<allow-intent href="tel:*"/>
-	<allow-intent href="geo:*"/>
-	<allow-intent href="http://*/*"/>
-	<allow-intent href="https://*/*"/>
-	<allow-intent href="mailto:*"/>
-	<allow-intent href="geo:*"/>
-	<allow-intent href="cdvfile://*"/>
+  <!-- 
+        Navigation Whitelist
+        Controls which URLs the WebView itself can be navigated to
+        -->
+  <allow-navigation href="*"/>
+  <allow-navigation href="cdvfile://*"/>
+  <allow-navigation href="file://*"/>
+  <!--
+          Network Request Whitelist
+          Controls which network requests (images, XHRs, etc) are allowed to be made
+          -->
+  <access origin="*"/>
+  <!-- For chrisben/imgcache.js
+          https://github.com/chrisben/imgcache.js/blob/master/CORDOVA.md 
+          -->
+  <access origin="cdvfile://*"/>
+  <access origin="file://*"/>
+  <!--
+            Intent Whitelist
+            Controls which URLs the app is allowed to ask the system to open
+            -->
+  <allow-intent href="file://*"/>
+  <allow-intent href="sms:*"/>
+  <allow-intent href="tel:*"/>
+  <allow-intent href="geo:*"/>
+  <allow-intent href="http://*/*"/>
+  <allow-intent href="https://*/*"/>
+  <allow-intent href="mailto:*"/>
+  <allow-intent href="geo:*"/>
+  <allow-intent href="cdvfile://*"/>
 </widget>
